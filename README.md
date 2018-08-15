@@ -3,8 +3,7 @@ Monocular camera calibration, binocular camera claibration and stereo matching
 
 ## Monocular camera calibration
 
-This part is just the same as [camera-calibration-and-image-undistortion](https://github.com/ChihaoZhang/
-camera-calibration-and-image-undistortion), please visit it for more detail.
+This part is just the same as [camera-calibration-and-image-undistortion](https://github.com/ChihaoZhang/camera-calibration-and-image-undistortion), please visit it for more detail.
 
 ## Binocular camera calibration
 
