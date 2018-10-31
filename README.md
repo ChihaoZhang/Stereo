@@ -19,3 +19,6 @@ This part is just the same as [camera-calibration-and-image-undistortion](https:
 If you have any question or advice, contact with me
 
 email: zhangchihao@zju.edu.cn
+
+## Revised
+- 31st, Oct. 2018: path error problem raised by @wyh6789
