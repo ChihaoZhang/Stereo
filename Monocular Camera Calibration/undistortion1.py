@@ -69,7 +69,7 @@ def undistort(img,k):
 #=============================== main =========================================    
 
 if __name__ == '__main__':
-    path='../../left'
+    path='../left'
     l=[] #store images' path
     i=[] #store images
     listdir(path,l)
