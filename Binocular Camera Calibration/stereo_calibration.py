@@ -20,7 +20,7 @@ imgpoints1 = []
 imgpoints2 = []
 
 # left camera calibration
-images = glob.glob('../../left/*.jpg')
+images = glob.glob('../left/*.jpg')
 for fname in images:
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -32,7 +32,7 @@ for fname in images:
 ret, mtx_l, dist_l, rvecs_l, tvecs_l = cv2.calibrateCamera(objpoints, imgpoints1, gray.shape[::-1],None,None)
 
 # right camera calibration
-images = glob.glob('../../right/*.jpg')
+images = glob.glob('../right/*.jpg')
 for fname in images:
     img = cv2.imread(fname)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -67,12 +67,12 @@ map1_l, map2_l = cv2.initUndistortRectifyMap(mtx_l, dist_l, R1, P1, gray.shape[:
 map1_r, map2_r = cv2.initUndistortRectifyMap(mtx_r, dist_r, R2, P2, gray.shape[::-1], cv2.CV_16SC2)
 
 # undistort the original image, take img#3 as an example
-left3 = cv2.imread('../../left/left03.jpg')
+left3 = cv2.imread('../left/left03.jpg')
 dst_l = cv2.remap(left3, map1_l, map2_l, cv2.INTER_LINEAR)
 cv2.imwrite('rectifyresult/left03(rectified).jpg', dst_l)
 if cv2.imwrite('rectifyresult/left03(rectified).jpg', dst_l)==True:
     print('rectification of left camera has been done successfully.\n')
-right3 = cv2.imread('../../right/right03.jpg')
+right3 = cv2.imread('../right/right03.jpg')
 dst_r = cv2.remap(right3, map1_r, map2_r, cv2.INTER_LINEAR)
 cv2.imwrite('rectifyresult/right03(rectified).jpg', dst_r)
 if cv2.imwrite('rectifyresult/right03(rectified).jpg', dst_r) == True:
